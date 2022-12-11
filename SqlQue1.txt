@@ -1,0 +1,185 @@
+Question:SqlQue1
+
+
+create database sushant;
+ create table parents(p_id int primary key, p_name varchar(30), city varchar(30), age int, annual_income int, occupation varchar(20),email varchar(40));
+Query OK, 0 rows affected (0.04 sec)
+insert into parents values(101,"Shah","Gujrat",31,500000,"Software Developer","Shah1@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(102,"Chaudhari","Gujrat",31,600000,"Software Engineer","Chaudhari@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(103,"Thakur","Mumbai",39,1600000,"Java Trainer","Thakur@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into parents values(104,"Chavan","Pune",35,1000000,"Civil Engineer","Chavan@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+ insert into parents values(105,"Patil","Delhi",40,1000000," Engineer","Patil@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(106,"Mehata","Banglore",45,4000000,"Builder","Mehata@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into parents values(107,"Pallavi","Chennai",36,400000,"software Developer","Pallavi@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+insert into parents values(108,"Bhosale","Ahmedabad",42,300000,"Builder","Bhosale@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+ insert into parents values(109,"kulthe","Banglore",45,3000000,"Doctor","kulthe@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into parents values(110,"Lohar","Ahmedabad",45,300000,"Builder","Lohar@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+insert into parents values(111,"Birla","Chennai",50,400000,"developer","Birla@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+ insert into parents values(112,"Shinde","Pune",51,300000,"developer","shinde@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into parents values(113,"Shinde","Mumbai",49,500000,"Jr engineer","Thakre@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(114,"Belekar","Chennai",46,700000,"Doctor","Belekar@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(115,"Ghogare","Pune",48,150000,"Nurse","Ghogare@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(116,"Karad","Pune",32,200000,"Nurse","Karad@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+ insert into parents values(117,"Thorat","Pune",30,3200000,"Builder","Thorat@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(118,"Bhise","Mumbai",40,4200000,"Businesmen","Bhise@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into parents values(119,"Jagtap","Chennai",41,200000,"Teacher","jagtap@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into parents values(120,"Devkule","Chennai",48,200000,"Teacher","Devkule@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+ select * from parents;
++------+-----------+-----------+------+---------------+--------------------+-------------------+
+| p_id | p_name    | city      | age  | annual_income | occupation         | email             |
++------+-----------+-----------+------+---------------+--------------------+-------------------+
+|  101 | Shah      | Gujrat    |   31 |        500000 | Software Developer | NA                |
+|  102 | Chaudhari | Gujrat    |   31 |        600000 | Software Engineer  | NA                |
+|  103 | Thakur    | Mumbai    |   39 |       1600000 | Java Trainer       | NA                |
+|  104 | Chavan    | Pune      |   35 |       1000000 | Civil Engineer     | NA                |
+|  105 | Patil     | Delhi     |   40 |       1000000 |  Engineer          | NA                |
+|  106 | Mehata    | Banglore  |   45 |       4000000 | Builder            | NA                |
+|  107 | Pallavi   | Chennai   |   36 |        400000 | software Developer | NA                |
+|  108 | Bhosale   | Ahmedabad |   42 |        300000 | Builder            | NA                |
+|  109 | kulthe    | Banglore  |   45 |       3000000 | Doctor             | kulthe@gmail.com  |
+|  110 | Lohar     | Ahmedabad |   45 |        300000 | Builder            | Lohar@gmail.com   |
+|  111 | Birla     | Chennai   |   50 |        400000 | developer          | Birla@gmail.com   |
+|  112 | Shinde    | Pune      |   51 |        300000 | developer          | shinde@gmail.com  |
+|  113 | Shinde    | Mumbai    |   49 |        500000 | Jr engineer        | Thakre@gmail.com  |
+|  114 | Belekar   | Chennai   |   46 |        700000 | Doctor             | Belekar@gmail.com |
+|  115 | Ghogare   | Pune      |   48 |        150000 | Nurse              | Ghogare@gmail.com |
+|  116 | Karad     | Pune      |   32 |        200000 | Nurse              | Karad@gmail.com   |
+|  117 | Thorat    | Pune      |   30 |       3200000 | Builder            | Thorat@gmail.com  |
+|  118 | Bhise     | Mumbai    |   40 |       4200000 | Businesmen         | Bhise@gmail.com   |
+|  119 | Jagtap    | Chennai   |   41 |        200000 | Teacher            | jagtap@gmail.com  |
+|  120 | Devkule   | Chennai   |   48 |        200000 | Teacher            | Devkule@gmail.com |
++------+-----------+-----------+------+---------------+--------------------+-------------------+
+20 rows in set (0.00 sec)
+
+2 query:-update parents Set email="NA";
+Query OK, 12 rows affected (0.01 sec)
+Rows matched: 20  Changed: 12  Warnings: 0
+
+mysql> select * from parents;
++------+-----------+-----------+------+---------------+--------------------+-------+
+| p_id | p_name    | city      | age  | annual_income | occupation         | email |
++------+-----------+-----------+------+---------------+--------------------+-------+
+|  101 | Shah      | Gujrat    |   31 |        500000 | Software Developer | NA    |
+|  102 | Chaudhari | Gujrat    |   31 |        600000 | Software Engineer  | NA    |
+|  103 | Thakur    | Mumbai    |   39 |       1600000 | Java Trainer       | NA    |
+|  104 | Chavan    | Pune      |   35 |       1000000 | Civil Engineer     | NA    |
+|  105 | Patil     | Delhi     |   40 |       1000000 |  Engineer          | NA    |
+|  106 | Mehata    | Banglore  |   45 |       4000000 | Builder            | NA    |
+|  107 | Pallavi   | Chennai   |   36 |        400000 | software Developer | NA    |
+|  108 | Bhosale   | Ahmedabad |   42 |        300000 | Builder            | NA    |
+|  109 | kulthe    | Banglore  |   45 |       3000000 | Doctor             | NA    |
+|  110 | Lohar     | Ahmedabad |   45 |        300000 | Builder            | NA    |
+|  111 | Birla     | Chennai   |   50 |        400000 | developer          | NA    |
+|  112 | Shinde    | Pune      |   51 |        300000 | developer          | NA    |
+|  113 | Shinde    | Mumbai    |   49 |        500000 | Jr engineer        | NA    |
+|  114 | Belekar   | Chennai   |   46 |        700000 | Doctor             | NA    |
+|  115 | Ghogare   | Pune      |   48 |        150000 | Nurse              | NA    |
+|  116 | Karad     | Pune      |   32 |        200000 | Nurse              | NA    |
+|  117 | Thorat    | Pune      |   30 |       3200000 | Builder            | NA    |
+|  118 | Bhise     | Mumbai    |   40 |       4200000 | Businesmen         | NA    |
+|  119 | Jagtap    | Chennai   |   41 |        200000 | Teacher            | NA    |
+|  120 | Devkule   | Chennai   |   48 |        200000 | Teacher            | NA    |
++------+-----------+-----------+------+---------------+--------------------+-------+
+20 rows in set (0.00 sec)
+
+3 query:-select * from parents Where annual_income>600000;
++------+---------+----------+------+---------------+----------------+-------+
+| p_id | p_name  | city     | age  | annual_income | occupation     | email |
++------+---------+----------+------+---------------+----------------+-------+
+|  103 | Thakur  | Mumbai   |   39 |       1600000 | Java Trainer   | NA    |
+|  104 | Chavan  | Pune     |   35 |       1000000 | Civil Engineer | NA    |
+|  105 | Patil   | Delhi    |   40 |       1000000 |  Engineer      | NA    |
+|  106 | Mehata  | Banglore |   45 |       4000000 | Builder        | NA    |
+|  109 | kulthe  | Banglore |   45 |       3000000 | Doctor         | NA    |
+|  114 | Belekar | Chennai  |   46 |        700000 | Doctor         | NA    |
+|  117 | Thorat  | Pune     |   30 |       3200000 | Builder        | NA    |
+|  118 | Bhise   | Mumbai   |   40 |       4200000 | Businesmen     | NA    |
++------+---------+----------+------+---------------+----------------+-------+
+8 rows in set (0.00 sec)
+
+4 query:-select * from parents where city="Ahmedabad" or city="Delhi" or city="Mumbai" or city= "Chennai" or city= "Banglore";
++------+---------+-----------+------+---------------+--------------------+-------+
+| p_id | p_name  | city      | age  | annual_income | occupation         | email |
++------+---------+-----------+------+---------------+--------------------+-------+
+|  103 | Thakur  | Mumbai    |   39 |       1600000 | Java Trainer       | NA    |
+|  105 | Patil   | Delhi     |   40 |       1000000 |  Engineer          | NA    |
+|  106 | Mehata  | Banglore  |   45 |       4000000 | Builder            | NA    |
+|  107 | Pallavi | Chennai   |   36 |        400000 | software Developer | NA    |
+|  108 | Bhosale | Ahmedabad |   42 |        300000 | Builder            | NA    |
+|  109 | kulthe  | Banglore  |   45 |       3000000 | Doctor             | NA    |
+|  110 | Lohar   | Ahmedabad |   45 |        300000 | Builder            | NA    |
+|  111 | Birla   | Chennai   |   50 |        400000 | developer          | NA    |
+|  113 | Shinde  | Mumbai    |   49 |        500000 | Jr engineer        | NA    |
+|  114 | Belekar | Chennai   |   46 |        700000 | Doctor             | NA    |
+|  118 | Bhise   | Mumbai    |   40 |       4200000 | Businesmen         | NA    |
+|  119 | Jagtap  | Chennai   |   41 |        200000 | Teacher            | NA    |
+|  120 | Devkule | Chennai   |   48 |        200000 | Teacher            | NA    |
++------+---------+-----------+------+---------------+--------------------+-------+
+13 rows in set (0.00 sec)
+
+5 query:-select * from parents Where annual_income<500000;
++------+---------+-----------+------+---------------+--------------------+-------+
+| p_id | p_name  | city      | age  | annual_income | occupation         | email |
++------+---------+-----------+------+---------------+--------------------+-------+
+|  107 | Pallavi | Chennai   |   36 |        400000 | software Developer | NA    |
+|  108 | Bhosale | Ahmedabad |   42 |        300000 | Builder            | NA    |
+|  110 | Lohar   | Ahmedabad |   45 |        300000 | Builder            | NA    |
+|  111 | Birla   | Chennai   |   50 |        400000 | developer          | NA    |
+|  112 | Shinde  | Pune      |   51 |        300000 | developer          | NA    |
+|  115 | Ghogare | Pune      |   48 |        150000 | Nurse              | NA    |
+|  116 | Karad   | Pune      |   32 |        200000 | Nurse              | NA    |
+|  119 | Jagtap  | Chennai   |   41 |        200000 | Teacher            | NA    |
+|  120 | Devkule | Chennai   |   48 |        200000 | Teacher            | NA    |
++------+---------+-----------+------+---------------+--------------------+-------+
+9 rows in set (0.00 sec)
+
+6 query:-select * from parents Where age<45;
++------+-----------+-----------+------+---------------+--------------------+-------+
+| p_id | p_name    | city      | age  | annual_income | occupation         | email |
++------+-----------+-----------+------+---------------+--------------------+-------+
+|  101 | Shah      | Gujrat    |   31 |        500000 | Software Developer | NA    |
+|  102 | Chaudhari | Gujrat    |   31 |        600000 | Software Engineer  | NA    |
+|  103 | Thakur    | Mumbai    |   39 |       1600000 | Java Trainer       | NA    |
+|  104 | Chavan    | Pune      |   35 |       1000000 | Civil Engineer     | NA    |
+|  105 | Patil     | Delhi     |   40 |       1000000 |  Engineer          | NA    |
+|  107 | Pallavi   | Chennai   |   36 |        400000 | software Developer | NA    |
+|  108 | Bhosale   | Ahmedabad |   42 |        300000 | Builder            | NA    |
+|  116 | Karad     | Pune      |   32 |        200000 | Nurse              | NA    |
+|  117 | Thorat    | Pune      |   30 |       3200000 | Builder            | NA    |
+|  118 | Bhise     | Mumbai    |   40 |       4200000 | Businesmen         | NA    |
+|  119 | Jagtap    | Chennai   |   41 |        200000 | Teacher            | NA    |
++------+-----------+-----------+------+---------------+--------------------+-------+
+11 rows in set (0.00 sec)

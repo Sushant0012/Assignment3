@@ -1,0 +1,80 @@
+Question:SqlQue2
+
+use sushant;
+Database changed
+mysql> create table Company1(c_id int primary key,c_name varchar(40),c_city varchar(30));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into Company1 values(101,"Dominos","Ann Arbor");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Company1 values(102,"Pizza Hut","Plano");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Company1 values(103,"Little Caesars pizza","Detroit");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Company1 values(104,"Sbarro pizza","Columbus");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Company1 values(105,"Marco's pizza","Toledo");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Company1 values(106,"Pizza Patron","Dallas");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Company1;
++------+----------------------+-----------+
+| c_id | c_name               | c_city    |
++------+----------------------+-----------+
+|  101 | Dominos              | Ann Arbor |
+|  102 | Pizza Hut            | Plano     |
+|  103 | Little Caesars pizza | Detroit   |
+|  104 | Sbarro pizza         | Columbus  |
+|  105 | Marco's pizza        | Toledo    |
+|  106 | Pizza Patron         | Dallas    |
++------+----------------------+-----------+
+6 rows in set (0.00 sec)
+
+create table item(i_id int primary key,i_name varchar(30),unitsold int,c_id int,foreign key(c_id)references Company1(c_id));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into item values(1,"Medium Pizza",6,103);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into item values(2,"Large Pizza",8,101);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into item values(3,"Garlic Bread",8,102);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into item values(4,"Chees Burst pizza",10,104);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into item values(5,"Small Pizza",11,105);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from item;
++------+-------------------+----------+------+
+| i_id | i_name            | unitsold | c_id |
++------+-------------------+----------+------+
+|    1 | Medium Pizza      |        6 |  103 |
+|    2 | Large Pizza       |        8 |  101 |
+|    3 | Garlic Bread      |        8 |  102 |
+|    4 | Chees Burst pizza |       10 |  104 |
+|    5 | Small Pizza       |       11 |  105 |
++------+-------------------+----------+------+
+5 rows in set (0.00 sec)
+
+ select c_name,c_city,I.i_name,I.unitsold from Company1 as C left join item as I on C.c_id=I.c_id;
++----------------------+-----------+-------------------+----------+
+| c_name               | c_city    | i_name            | unitsold |
++----------------------+-----------+-------------------+----------+
+| Dominos              | Ann Arbor | Large Pizza       |        8 |
+| Pizza Hut            | Plano     | Garlic Bread      |        8 |
+| Little Caesars pizza | Detroit   | Medium Pizza      |        6 |
+| Sbarro pizza         | Columbus  | Chees Burst pizza |       10 |
+| Marco's pizza        | Toledo    | Small Pizza       |       11 |
+| Pizza Patron         | Dallas    | French Fries      |        9 |
++----------------------+-----------+-------------------+----------+
+6 rows in set (0.00 sec)
